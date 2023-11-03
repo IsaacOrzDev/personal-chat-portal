@@ -6,6 +6,5 @@ export const runtime = 'edge'
 export default function IndexPage() {
   const id = nanoid()
 
-  return <Chat id={id} />
-  // return <Chat id={id} api="http://localhost:8000" />
+  return <Chat id={id} api={process.env.CHAT_API} />
 }

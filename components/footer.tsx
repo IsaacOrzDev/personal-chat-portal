@@ -12,12 +12,13 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
       )}
       {...props}
     >
-      The chatbot built with{' '}
-      <ExternalLink href="https://nextjs.org">Next.js</ExternalLink> and{' '}
-      <ExternalLink href="https://vercel.com/storage/kv">
-        Vercel KV
+      The chatbot api built with{' '}
+      <ExternalLink href="https://fastapi.tiangolo.com/">Fast API</ExternalLink>{' '}
+      with{' '}
+      <ExternalLink href="https://github.com/awslabs/aws-lambda-web-adapter">
+        Lambda Web Adapter
       </ExternalLink>
-      .
+      in <ExternalLink href="https://aws.amazon.com/">AWS</ExternalLink>.
     </p>
   )
 }

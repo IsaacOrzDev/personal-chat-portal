@@ -18,7 +18,7 @@ export async function Header() {
       </div>
       <div className="flex items-center justify-end space-x-2">
         {/* <ThemeToggle /> */}
-        <a
+        {/* <a
           target="_blank"
           href="https://github.com/vercel/nextjs-ai-chatbot/"
           rel="noopener noreferrer"
@@ -26,7 +26,7 @@ export async function Header() {
         >
           <IconGitHub />
           <span className="hidden ml-2 md:flex">GitHub</span>
-        </a>
+        </a> */}
       </div>
     </header>
   )

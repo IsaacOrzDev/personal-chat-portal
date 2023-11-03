@@ -4,7 +4,6 @@ import { Configuration, OpenAIApi } from 'openai-edge'
 import Replicate from 'replicate'
 import { experimental_buildLlama2Prompt } from 'ai/prompts'
 
-import { auth } from '@/auth'
 import { nanoid } from '@/lib/utils'
 
 // const configuration = new Configuration({

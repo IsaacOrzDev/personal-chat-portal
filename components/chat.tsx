@@ -25,9 +25,10 @@ const IS_PREVIEW = process.env.VERCEL_ENV === 'preview'
 export interface ChatProps extends React.ComponentProps<'div'> {
   initialMessages?: Message[]
   id?: string
+  api?: string
 }
 
-export function Chat({ id, initialMessages, className }: ChatProps) {
+export function Chat({ id, initialMessages, className, api }: ChatProps) {
   const [previewToken, setPreviewToken] = useLocalStorage<string | null>(
     'ai-token',
     null
@@ -38,6 +39,10 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
     useChat({
       initialMessages,
       id,
+      api,
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: {
         id,
         previewToken
@@ -71,7 +76,7 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
         setInput={setInput}
       />
 
-      <Dialog open={previewTokenDialog} onOpenChange={setPreviewTokenDialog}>
+      {/* <Dialog open={previewTokenDialog} onOpenChange={setPreviewTokenDialog}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Enter your OpenAI Key</DialogTitle>
@@ -105,7 +110,7 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
             </Button>
           </DialogFooter>
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </>
   )
 }

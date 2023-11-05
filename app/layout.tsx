@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: 'Personal Chat',
     template: `%s - Personal Chat`
   },
-  description: 'A chatbot built with Next.js and Vercel.',
+  description: 'A chatbot for personal use.',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' }
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Personal Chat',
     siteName: 'Personal Chat',
-    description: 'A chatbot built with Next.js and Vercel.',
+    description: 'A chatbot for personal use.',
     url: process.env.NEXT_PUBLIC_BASE_URL,
     images: [
       {

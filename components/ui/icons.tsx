@@ -3,6 +3,7 @@
 import * as React from 'react'
 
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 function IconNextChat({
   className,
@@ -106,12 +107,14 @@ function IconOpenAI({ className, ...props }: React.ComponentProps<'svg'>) {
 
 function IconDeveloper() {
   return (
-    <img
-      src="https://avatars.githubusercontent.com/u/35476532?v=4"
-      alt="icon"
-      width={36}
-      height={36}
-    />
+    <Link href={process.env.NEXT_PUBLIC_GITHUB_URL ?? ''}>
+      <img
+        src={process.env.NEXT_PUBLIC_ICON_URL}
+        alt="icon"
+        width={36}
+        height={36}
+      />
+    </Link>
   )
 }
 

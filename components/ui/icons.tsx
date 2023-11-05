@@ -104,6 +104,17 @@ function IconOpenAI({ className, ...props }: React.ComponentProps<'svg'>) {
   )
 }
 
+function IconDeveloper() {
+  return (
+    <img
+      src="https://avatars.githubusercontent.com/u/35476532?v=4"
+      alt="icon"
+      width={36}
+      height={36}
+    />
+  )
+}
+
 function IconVercel({ className, ...props }: React.ComponentProps<'svg'>) {
   return (
     <svg
@@ -481,7 +492,6 @@ export {
   IconNextChat,
   IconOpenAI,
   IconVercel,
-  IconGitHub,
   IconSeparator,
   IconArrowDown,
   IconArrowRight,
@@ -503,5 +513,7 @@ export {
   IconShare,
   IconUsers,
   IconExternalLink,
-  IconChevronUpDown
+  IconChevronUpDown,
+  IconGitHub,
+  IconDeveloper
 }

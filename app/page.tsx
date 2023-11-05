@@ -6,5 +6,17 @@ export const runtime = 'edge'
 export default function IndexPage() {
   const id = nanoid()
 
-  return <Chat id={id} api={process.env.CHAT_API} />
+  return (
+    <Chat
+      id={id}
+      api={process.env.CHAT_API}
+      initialMessages={[
+        {
+          id: 'welcome',
+          role: 'assistant',
+          content: ''
+        }
+      ]}
+    />
+  )
 }

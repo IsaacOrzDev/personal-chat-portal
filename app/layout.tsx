@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: 'Personal Chat',
     template: `%s - Personal Chat`
   },
-  description: 'An chatbot template built with Next.js and Vercel.',
+  description: 'A chatbot built with Next.js and Vercel.',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' }
@@ -23,6 +23,19 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png'
+  },
+  openGraph: {
+    title: 'Personal Chat',
+    siteName: 'Personal Chat',
+    description: 'A chatbot built with Next.js and Vercel.',
+    url: process.env.NEXT_PUBLIC_BASE_URL,
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/og.png`,
+        width: 700,
+        height: 485
+      }
+    ]
   }
 }
 

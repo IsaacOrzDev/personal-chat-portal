@@ -1,5 +1,6 @@
 'use client'
 
+import { ExternalLink } from '@/components/external-link'
 import { useTheme } from 'next-themes'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -27,8 +28,13 @@ export default function IndexPage() {
   })
 
   return (
-    <div className="flex w-full justify-center py-10">
-      Initialize the lambda function in AWS...
-    </div>
+    <p className="mx-auto w-full py-10 text-center">
+      Initialize the{' '}
+      <ExternalLink href="https://aws.amazon.com/lambda/">
+        Lambda Function
+      </ExternalLink>{' '}
+      in <ExternalLink href="https://aws.amazon.com/">AWS</ExternalLink>. It may
+      take few seconds...
+    </p>
   )
 }

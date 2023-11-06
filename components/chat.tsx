@@ -71,16 +71,17 @@ export function Chat({ id, className, api, question }: ChatProps) {
           <>
             <ChatList messages={messages} />
             <ChatScrollAnchor trackVisibility={isLoading} />
-            {isLoading && messages.length > 1 && (
-              <div className="relative mx-auto max-w-2xl px-4 text-xs leading-normal text-muted-foreground">
-                The response time may vary occasionally due to its integration
-                with external services like{' '}
-                <ExternalLink href="https://replicate.com/">
-                  Replicate
-                </ExternalLink>
-                .
-              </div>
-            )}
+            {isLoading &&
+              messages.filter(x => x.role === 'user').length > 0 && (
+                <div className="relative mx-auto max-w-2xl px-4 text-xs leading-normal text-muted-foreground">
+                  The response time may vary occasionally due to its integration
+                  with external services like{' '}
+                  <ExternalLink href="https://replicate.com/">
+                    Replicate
+                  </ExternalLink>
+                  .
+                </div>
+              )}
           </>
         ) : (
           // <EmptyScreen setInput={setInput} />

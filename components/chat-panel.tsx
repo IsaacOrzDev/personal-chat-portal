@@ -42,7 +42,7 @@ export function ChatPanel({
               className="bg-background"
             >
               <IconStop className="mr-2" />
-              Stop generating
+              Thinking... You can stop generating
             </Button>
           ) : (
             messages?.length > 0 && (

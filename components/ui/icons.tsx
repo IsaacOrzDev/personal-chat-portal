@@ -107,7 +107,7 @@ function IconOpenAI({ className, ...props }: React.ComponentProps<'svg'>) {
 
 function IconDeveloper() {
   return (
-    <Link href={process.env.NEXT_PUBLIC_GITHUB_URL ?? ''}>
+    <Link href={process.env.NEXT_PUBLIC_GITHUB_URL ?? ''} target="_blank">
       <img
         src={process.env.NEXT_PUBLIC_ICON_URL}
         alt="icon"

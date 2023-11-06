@@ -20,6 +20,7 @@ import { useEffect, useState } from 'react'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { toast } from 'react-hot-toast'
+import { ExternalLink } from './external-link'
 
 const IS_PREVIEW = process.env.VERCEL_ENV === 'preview'
 export interface ChatProps extends React.ComponentProps<'div'> {
@@ -65,6 +66,16 @@ export function Chat({ id, initialMessages, className, api }: ChatProps) {
           <>
             <ChatList messages={messages} />
             <ChatScrollAnchor trackVisibility={isLoading} />
+            {isLoading && messages.length > 1 && (
+              <div className="relative mx-auto max-w-2xl px-4 text-xs leading-normal text-muted-foreground">
+                The response time may vary occasionally due to its integration
+                with external services like{' '}
+                <ExternalLink href="https://replicate.com/">
+                  Replicate
+                </ExternalLink>
+                .
+              </div>
+            )}
           </>
         ) : (
           // <EmptyScreen setInput={setInput} />

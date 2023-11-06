@@ -15,11 +15,13 @@ export default function IndexPage() {
     const themeParam = params.get('theme')
     setTheme(themeParam ?? 'system')
 
+    const questionParam = params.get('question')
+
     const result = await fetch(process.env.NEXT_PUBLIC_CHAT_API ?? '', {}).then(
       res => res.json()
     )
     if (result.status === 'ok') {
-      router.replace('/chat')
+      router.replace(`/chat?question=${questionParam ?? ''}`)
     }
   }
 

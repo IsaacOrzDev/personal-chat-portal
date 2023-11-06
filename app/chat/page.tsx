@@ -3,20 +3,18 @@ import { Chat } from '@/components/chat'
 
 export const runtime = 'edge'
 
-export default function IndexPage() {
+interface Props {
+  searchParams: any
+}
+
+export default function IndexPage(props: Props) {
   const id = nanoid()
 
   return (
     <Chat
       id={id}
       api={process.env.NEXT_PUBLIC_CHAT_API}
-      initialMessages={[
-        {
-          id: 'welcome',
-          role: 'assistant',
-          content: ''
-        }
-      ]}
+      question={props.searchParams?.question}
     />
   )
 }

@@ -18,10 +18,10 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
       <ExternalLink href="https://github.com/awslabs/aws-lambda-web-adapter">
         Lambda Web Adapter
       </ExternalLink>
-      in <ExternalLink href="https://aws.amazon.com/">AWS</ExternalLink>. The
-      response time may vary occasionally due to its integration with external
+      in <ExternalLink href="https://aws.amazon.com/">AWS</ExternalLink>.
+      {/* The response time may vary occasionally due to its integration with external
       services like{' '}
-      <ExternalLink href="https://replicate.com/">Replicate</ExternalLink>.
+      <ExternalLink href="https://replicate.com/">Replicate</ExternalLink>. */}
     </p>
   )
 }
